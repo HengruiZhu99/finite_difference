@@ -27,8 +27,8 @@ int main(){
       z = complex(x, y);
       int k=0;
       for(k=0; k<300; k++) {
-	z = QuadIterate(z);
-	if(z.abs()>1000.) {break;}
+        z = QuadIterate(z);
+        if(z.abs()>1000.) {break;}
       }
       outfile << log(1.+k) << " ";
     }

@@ -5,7 +5,10 @@
 
 
 // The constructor for the "cell" class:
-cell::cell(int Ind, double Cent, int Nfieldsgiven, std::vector<double> Vals, std::vector<int> Neighbors, std::vector<double> OutDir, std::vector<bool> IsInterior, std::vector<double> BdryLocation, std::vector<double> flowDirection){
+cell::cell(int Ind, double Cent, int Nfieldsgiven, std::vector<double> Vals, 
+std::vector<int> Neighbors, std::vector<double> OutDir, std::vector<bool> IsInterior, 
+std::vector<double> BdryLocation, std::vector<double> flowDirection){
+  
   index = Ind;
   center = Cent;
   Nfields = Nfieldsgiven;
@@ -28,7 +31,9 @@ cell::cell(int Ind, double Cent, int Nfieldsgiven, std::vector<double> Vals, std
 
 // Constructor for the "DataGrid" class that takes overall left and right boundaries, number of cells, a flag
 // to specify whether the domain is periodic, and (optionally) data values in each cell:
-DataGrid::DataGrid(double x1, double x2, int N, bool periodic=0, int Nfieldsgiven=3, std::vector<std::vector<double> > values = std::vector<std::vector<double> >{}, std::vector<double> flowdirection = std::vector<double>{0.,1.,-1.}){
+DataGrid::DataGrid(double x1, double x2, int N, bool periodic=0, int Nfieldsgiven=3, 
+std::vector<std::vector<double> > values = std::vector<std::vector<double> >{}, 
+std::vector<double> flowdirection = std::vector<double>{0.,1.,-1.}){
   // Set the simplest member variables immediately:
   Bdry1 = x1;
   Bdry2 = x2;

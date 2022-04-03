@@ -11,13 +11,19 @@ std::vector<double> cos_by_val(std::vector<double>);
 
 int main(){
 
+  // Syntax:
+  //  Ampersand (&), "Reference operator"
+  //  Asterisk (*), "Dereference operator"
+  
+  /*
   // A demo of references and dereferences with basic types (here, double):
   std::cout << "Floating-point number:" << std::endl;
   double x = 3.14159;
   std::cout << "x = " << x << "   (value of x)" << std::endl;
   std::cout << "&x = " << &x << "    (address of [aka, \'reference to\'] x)" << std::endl;
   std::cout << "*(&x) = " << *(&x) << "    (value [aka \'de-reference\'] of address [reference] of x)" << std::endl;
-
+  */
+  
   /*
   // A demo of references and dereferences with std::vector:
   std::cout << std::endl;
@@ -58,7 +64,7 @@ int main(){
   std::cout << "     But now let\'s check what y is: y = " << y << "   (uh oh!)" << std::endl;
   */  
 
-  /*
+  ///*
   // A demo of one reason why you might want to pass references to functions anyway:
   std::cout << std::endl;
   std::cout << "Testing a function on a large vector:" << std::endl;
@@ -68,11 +74,11 @@ int main(){
   std::cout << "   Check memory usage (for instance, using 'top' in linux/unix) to see effect." << std::endl;
   for(int i=0; i<10; i++){
     std::cout << "Iteration " << i << std::endl;
-    W = cos_by_ref(W);
-    //W = cos_by_val(W);
+    //W = cos_by_ref(W);
+    W = cos_by_val(W);
   }
   std::cout << "W[0] = " << W[0] << std::endl;
-  */
+  //*/
   
   return 0;
 }
